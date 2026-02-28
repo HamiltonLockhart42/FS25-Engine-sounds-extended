@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!-- xml+gls by [FD] Vassili_k98   -->
+<sounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/vehicle_sounds.xsd">
+    <motorized>
+        <sounds>
+			
+			<!-- <Motor_int> -->
+			
+			<motor file="universal/4_cylinder/2000_4_cylinder/FD_4zyl_A_int.gls" volumeScale="1.0"  loopSynthesisRPMRatio="0.98" pitchScale="1.00" outerRadius="15.0" innerRadius="0.5">
+				<volume indoor="1.80" outdoor="0.0" />
+				<lowpassGain indoor="1.0" outdoor="12.00" />
+                <lowpassCutoffFrequency indoor="800" outdoor="800"/>
+                <lowpassResonance indoor="0" outdoor="1"/>
+			</motor>
+			
+			<!-- <Motor_ext> -->
+			
+            <motor file="universal/4_cylinder/2000_4_cylinder/FD_4zyl_A_eng.gls" volumeScale="1.0" linkNodeOffset="0.0 0.5 2.0" loopSynthesisRPMRatio="0.95" pitchScale="1.00" outerRadius="38.0" innerRadius="1">
+				<volume indoor="0.0" outdoor="1.0" />
+				<lowpassGain indoor="0.55" outdoor="1.05" />
+                <lowpassCutoffFrequency indoor="400" outdoor="1000"/>
+                <lowpassResonance indoor="0" outdoor="0"/>
+			</motor>
+			
+			<!-- <Auspuff> -->
+			
+			<motor file="universal/4_cylinder/2000_4_cylinder/FD_4zyl_A_exh.gls" volumeScale="1.0" linkNodeOffset="-0.2 2.8 0.5" loopSynthesisRPMRatio="0.95" pitchScale="1.00" outerRadius="68.0" innerRadius="0.5">
+				<volume indoor="1.2" outdoor="1.6" />
+				<lowpassGain indoor="0.35" outdoor="0.7" />
+                <lowpassCutoffFrequency indoor="400" outdoor="800"/>
+                <lowpassResonance indoor="0" outdoor="0"/>
+			</motor>
+			
+			<!-- <Turbo> -->
+			
+			<gearbox file="universal/6_cylinder/2000_6_cylinder/FD_JCB_Turbo.gls" volumeScale="1.05"  linkNodeOffset="-0.2 2.8 0.5" pitchScale="1.05" fadeIn="1.5" fadeOut="1.5" innerRadius="0.5" outerRadius="52.0">
+				<volume indoor="0.40" outdoor="1.05" >
+					<modifier type="MOTOR_LOAD" value="0.00"   modifiedValue="0.00" />
+                    <modifier type="MOTOR_LOAD" value="0.4"  modifiedValue="0.40" />
+                    <modifier type="MOTOR_LOAD" value="0.70"  modifiedValue="1.00" />
+                    <modifier type="MOTOR_LOAD" value="1.0" modifiedValue="1.40" />
+                </volume>
+				<loopSynthesisRpm>
+                    <modifier type="MOTOR_RPM" value="0.0" modifiedValue="0.0" />
+                    <modifier type="MOTOR_RPM" value="0.4" modifiedValue="0.4" />
+					<modifier type="MOTOR_RPM" value="0.53" modifiedValue="0.45" />
+					<modifier type="MOTOR_RPM" value="0.61" modifiedValue="0.88" />
+                    <modifier type="MOTOR_RPM" value="0.81" modifiedValue="1.0" />
+					<modifier type="MOTOR_RPM" value="0.95" modifiedValue="1.0" />
+                </loopSynthesisRpm>
+				<loopSynthesisLoad>
+					<modifier type="MOTOR_LOAD" value="0.0" modifiedValue="-1.0" />
+                    <modifier type="MOTOR_LOAD" value="0.2" modifiedValue="0.0" />
+                    <modifier type="MOTOR_LOAD" value="0.6" modifiedValue="0.7" />
+					<modifier type="MOTOR_LOAD" value="0.8" modifiedValue="0.85" />
+                    <modifier type="MOTOR_LOAD" value="1.0" modifiedValue="1.0" />
+                </loopSynthesisLoad>
+				<lowpassGain indoor="0.6" outdoor="0.8" />
+				<lowpassCutoffFrequency indoor="600" outdoor="1000.0" />
+				<lowpassResonance indoor="0.0" outdoor="1.0"/>
+			</gearbox>
+            
+			<!-- <Retarder> -->
+			
+            <retarder file="universal/4_cylinder/2000_4_cylinder/FD_4zyl_A_eng.gls" volumeScale="1.1" linkNodeOffset="-0.2 2.8 0.5" fadeIn="0.5" pitchScale="1.02" innerRadius="1.5" outerRadius="65.0" >
+				<volume indoor="0.55" outdoor="1.2" >
+					<modifier type="SPEED" value="4.0" modifiedValue="0.0" />
+					<modifier type="SPEED" value="55.0" modifiedValue="1.8" />
+					<modifier type="MOTOR_LOAD" value="0" modifiedValue="0.8" />
+					<modifier type="MOTOR_LOAD" value="0.35" modifiedValue="0.4" />
+					<modifier type="MOTOR_LOAD" value="0.5" modifiedValue="0.0" />
+					<modifier type="MOTOR_RPM" value="0.1" modifiedValue="0.3" />
+					<modifier type="MOTOR_RPM" value="0.5" modifiedValue="0.8" />
+					<modifier type="MOTOR_RPM" value="1.0" modifiedValue="0.82" />
+				</volume>
+				<loopSynthesisRpm>
+                    <modifier type="MOTOR_RPM" value="0.0" modifiedValue="0.0" />
+                    <modifier type="MOTOR_RPM" value="0.5" modifiedValue="0.5" />
+					<modifier type="MOTOR_RPM" value="0.65" modifiedValue="0.65" />
+                    <modifier type="MOTOR_RPM" value="1.0" modifiedValue="1.0" />
+                </loopSynthesisRpm>
+				<loopSynthesisLoad>
+					<modifier type="MOTOR_LOAD" value="-1.0" modifiedValue="0.88" />
+					<modifier type="MOTOR_LOAD" value="0.0" modifiedValue="1.0" />
+                    <modifier type="MOTOR_LOAD" value="0.2" modifiedValue="0.7" />
+                    <modifier type="MOTOR_LOAD" value="0.5" modifiedValue="0.5" />
+                    <modifier type="MOTOR_LOAD" value="1.0" modifiedValue="0.4" />
+                </loopSynthesisLoad>
+				<lowpassGain indoor="0.45" outdoor="0.50" />
+                <lowpassCutoffFrequency indoor="900" outdoor="1500"/>
+                <lowpassResonance indoor="1" outdoor="1"/>
+			</retarder>
+			
+			<!-- <Getriebe> -->
+			
+			<gearbox file="universal/6_cylinder/2000_6_cylinder/FD_JCB_Getriebe.gls" linkNodeOffset="0 0.8 -0.2" fadeIn="1" loopSynthesisRPMRatio="1.00" volumeScale="1.13" outerRadius="62.0" pitchScale="1.2" innerRadius="0.5">
+				<volume indoor="1.35" outdoor="2.8" >
+            
+				<modifier type="SPEED" value="1.0" modifiedValue="0.00" />			
+				<modifier type="SPEED" value="27.0" modifiedValue="0.7" />
+				<modifier type="SPEED" value="33.0" modifiedValue="0.9" />			
+				<modifier type="SPEED" value="45.0" modifiedValue="1.1" />          
+
+				<modifier type="MOTOR_LOAD" value="-1.00" modifiedValue="0.8" />
+				<modifier type="MOTOR_LOAD" value="0.00" modifiedValue="1.6" />
+				<modifier type="MOTOR_LOAD" value="0.20" modifiedValue="1.3" />
+				<modifier type="MOTOR_LOAD" value="0.45" modifiedValue="1.1" />
+				<modifier type="MOTOR_LOAD" value="0.80" modifiedValue="0.8" />
+				<modifier type="MOTOR_LOAD" value="1.00" modifiedValue="0.74" />
+
+				<modifier type="DRIVING_DIRECTION" value="-1.0" modifiedValue="1.0" />
+				<modifier type="DRIVING_DIRECTION" value="0.00" modifiedValue="0.0" />
+				<modifier type="DRIVING_DIRECTION" value="1.00" modifiedValue="1.0" />
+				</volume>
+				<pitch indoor="1.0" outdoor="1.0">
+
+				<modifier type="SUSPENSION" value="-1.0" modifiedValue="0.9" />
+				<modifier type="SUSPENSION" value="-0.5" modifiedValue="0.95" />
+				<modifier type="SUSPENSION" value="0.0" modifiedValue="1.0" />
+				<modifier type="SUSPENSION" value="0.5" modifiedValue="1.05" />
+				<modifier type="SUSPENSION" value="1.0" modifiedValue="1.1" />
+
+				<modifier type="DRIVING_DIRECTION" value="-1.0" modifiedValue="2.3" />
+				<modifier type="DRIVING_DIRECTION" value="0.00" modifiedValue="1.0" />
+				<modifier type="DRIVING_DIRECTION" value="1.00" modifiedValue="1.0" />
+				</pitch>
+				<loopSynthesisRpm>
+                    <modifier type="SPEED" value="0.0" modifiedValue="0.0" />
+                    <modifier type="SPEED" value="20" modifiedValue="0.5" />
+					<modifier type="SPEED" value="38" modifiedValue="0.80" />
+                    <modifier type="SPEED" value="45" modifiedValue="1.0" />
+                </loopSynthesisRpm>
+				<loopSynthesisLoad>
+					<modifier type="MOTOR_LOAD" value="-1.0" modifiedValue="0.88" />
+					<modifier type="MOTOR_LOAD" value="0.0" modifiedValue="0.0" />
+                    <modifier type="MOTOR_LOAD" value="0.2" modifiedValue="0.3" />
+                    <modifier type="MOTOR_LOAD" value="0.5" modifiedValue="0.5" />
+                    <modifier type="MOTOR_LOAD" value="1.0" modifiedValue="1.0" />
+                </loopSynthesisLoad>
+				<lowpassGain indoor="0.3" outdoor="0.4" />
+				<lowpassCutoffFrequency indoor="200" outdoor="400.0" />
+				<lowpassResonance indoor="1.0" outdoor="1.0"/>
+			</gearbox>
+			
+			<!-- <Lüfter> -->
+			
+			<gearbox  file="$data/vehicles/volvo/lm845/sounds/Fan_loop.gls" linkNodeOffset="0 1.5 2.5" loopSynthesisRPMRatio="0.92" pitchScale="0.85" volumeScale="0.9" innerRadius="0.5" outerRadius="25" fadeIn="3" fadeOut="1.5" >
+                <lowpassGain indoor="0.52" outdoor="1.4" />
+                <lowpassCutoffFrequency indoor="500" outdoor="1000"/>
+                <lowpassResonance indoor="0" outdoor="0"/>
+                <volume indoor="0.40" outdoor="1.00" >
+                    <modifier type="DIFFERENTIAL_SPEED" value="0.0"  modifiedValue="0.80" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="10.0" modifiedValue="0.70" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="25.0" modifiedValue="0.75" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="43.0" modifiedValue="1.25" />
+
+                    <modifier type="MOTOR_LOAD" value="0.00"   modifiedValue="1.20" />
+                    <modifier type="MOTOR_LOAD" value="35.00"  modifiedValue="1.00" />
+                    <modifier type="MOTOR_LOAD" value="75.00"  modifiedValue="1.20" />
+                    <modifier type="MOTOR_LOAD" value="100.00" modifiedValue="1.40" />
+                </volume>
+				<loopSynthesisRpm>
+                    <modifier type="MOTOR_RPM" value="0.0" modifiedValue="0.2" />
+                    <modifier type="MOTOR_RPM" value="1.0" modifiedValue="1.0" />
+                </loopSynthesisRpm>
+                <pitch>
+                    <modifier type="SUSPENSION" value="-0.08" modifiedValue="0.9" />
+                    <modifier type="SUSPENSION" value="-0.02" modifiedValue="0.95" />
+                    <modifier type="SUSPENSION" value="0.0" modifiedValue="1.0" />
+                    <modifier type="SUSPENSION" value="0.02" modifiedValue="1.05" />
+                    <modifier type="SUSPENSION" value="0.08" modifiedValue="1.1" />
+                </pitch>
+            </gearbox>
+			
+			
+            <!-- <Ketten> -->
+			
+			<gearbox  file="universal/FD_extras/FD_Extra.gls"  volumeScale="0.7" pitchScale="1.2" fadeIn="0.5" fadeOut="1.5" innerRadius="2.5" outerRadius="40">
+				
+                <volume indoor="0.9" outdoor="1.8" >
+                    <modifier type="SUSPENSION" value="-0.15" modifiedValue="1" />
+                    <modifier type="SUSPENSION" value="-0.07" modifiedValue="1.5" />
+                    <modifier type="SUSPENSION" value="-0.02" modifiedValue="1.3" />
+                    <modifier type="SUSPENSION" value="-0.01" modifiedValue="0.5" />
+                    <modifier type="SUSPENSION" value="0.0"   modifiedValue="0.0" />
+                    <modifier type="SUSPENSION" value="0.01"  modifiedValue="0.5" />
+                    <modifier type="SUSPENSION" value="0.02"  modifiedValue="1.3" />
+                    <modifier type="SUSPENSION" value="0.07"  modifiedValue="1.5" />
+                    <modifier type="SUSPENSION" value="0.15"  modifiedValue="1" />
+                </volume>
+				
+                <loopSynthesisRpm>
+                    <modifier type="MOTOR_RPM" value="0.0" modifiedValue="0.55" />
+                    <modifier type="MOTOR_RPM" value="1.0" modifiedValue="0.55" />
+                </loopSynthesisRpm>
+				
+				<pitch indoor="1.0" outdoor="1.0" >
+					<modifier type="MOTOR_RPM" value="0.0" modifiedValue="1.00" />
+					<modifier type="MOTOR_RPM" value="1.0" modifiedValue="1.05" />
+				</pitch>
+				
+				<lowpassGain indoor="0.3" outdoor="10.5" />
+				<lowpassCutoffFrequency indoor="150" outdoor="900.0" />
+				<lowpassResonance indoor="0.0" outdoor="1.0"/>
+				<randomization minVolume="-0.2" maxVolume="0.3" minPitch="-0.1" maxPitch="0.1"/>
+			</gearbox>
+			
+			<!-- <Sitz> -->
+			
+			<gearbox  file="universal/FD_extras/FD_Extra.gls" pitchScale="1.05" innerRadius="2.0" outerRadius="5.0" fadeOut="0.2" volumeScale="1.0" isLocalSound="true" supportsReverb="false">
+                <volume indoor="3.5" outdoor="0.0" >
+					<modifier type="SPEED" value="1.0" modifiedValue="0.03" />			
+					<modifier type="SPEED" value="7.0" modifiedValue="0.3" />
+					<modifier type="SPEED" value="10.0" modifiedValue="0.7" />			
+					<modifier type="SPEED" value="25.0" modifiedValue="1.2" />
+					<modifier type="SPEED" value="35.0" modifiedValue="2.4" />
+					
+					<modifier type="SUSPENSION" value="-1.0" modifiedValue="1.6" />
+					<modifier type="SUSPENSION" value="-0.05" modifiedValue="1.2" />
+					<modifier type="SUSPENSION" value="-0.01" modifiedValue="0.5" />
+					<modifier type="SUSPENSION" value="0.00" modifiedValue="0.00" />
+					<modifier type="SUSPENSION" value="0.01" modifiedValue="0.5" />
+					<modifier type="SUSPENSION" value="0.05" modifiedValue="1.3" />
+					<modifier type="SUSPENSION" value="1.0" modifiedValue="1.5" />
+				</volume>
+				
+				<pitch indoor="1.00" outdoor="0.5" >
+					<modifier type="SPEED" value="0.0" modifiedValue="1.0"/>
+					<modifier type="SPEED" value="20.0" modifiedValue="1.2"/>
+				</pitch>
+				
+				<loopSynthesisRpm>
+                    <modifier type="MOTOR_RPM" value="0.0" modifiedValue="0.98" />
+                    <modifier type="MOTOR_RPM" value="1.0" modifiedValue="0.98" />
+                </loopSynthesisRpm>
+				
+				<lowpassGain indoor="1.2" outdoor="0.3" />
+				<lowpassCutoffFrequency indoor="900" outdoor="500.0" />
+				<lowpassResonance indoor="1.0" outdoor="1.0"/>
+				<randomization minVolume="-0.2" maxVolume="0.3" minPitch="-0.1" maxPitch="0.1" isInside="true" isOutside="false"/>
+			</gearbox>
+			
+			<gearbox  file="universal/FD_extras/FD_Extra.gls" pitchScale="1.15"  innerRadius="1.0" outerRadius="15.0" fadeOut="0.2" volumeScale="1.0" isLocalSound="true" supportsReverb="false">
+                <volume indoor="3.5" outdoor="0.0" >
+					<modifier type="ACCELERATE" value="0.0" modifiedValue="0.5" />
+					<modifier type="ACCELERATE" value="0.2" modifiedValue="1.0" />
+					<modifier type="CRUISECONTROL" value="0" modifiedValue="1.0" />
+					<modifier type="CRUISECONTROL" value="1" modifiedValue="2.0" />
+					<modifier type="SPEED" value="0.0" modifiedValue="0.00" />
+					<modifier type="SPEED" value="3.0" modifiedValue="0.80" />
+					<modifier type="SPEED" value="11.0" modifiedValue="0.95" />
+					<modifier type="SPEED" value="18.0" modifiedValue="1.45" />
+					<modifier type="SPEED" value="28.0" modifiedValue="1.80" />
+					<modifier type="SUSPENSION" value="-1.0" modifiedValue="1.2" />
+					<modifier type="SUSPENSION" value="-0.06" modifiedValue="1.1" />
+					<modifier type="SUSPENSION" value="-0.03" modifiedValue="0.5" />
+					<modifier type="SUSPENSION" value="-0.01" modifiedValue="0.00" />
+					<modifier type="SUSPENSION" value="0.01" modifiedValue="0.00" />
+					<modifier type="SUSPENSION" value="0.03" modifiedValue="0.5" />
+					<modifier type="SUSPENSION" value="0.06" modifiedValue="1.1" />
+					<modifier type="SUSPENSION" value="1.0" modifiedValue="1.2" />
+				</volume>
+				
+				<loopSynthesisRpm>
+                    <modifier type="MOTOR_RPM" value="0.0" modifiedValue="0.78" />
+                    <modifier type="MOTOR_RPM" value="1.0" modifiedValue="0.78" />
+                </loopSynthesisRpm>
+				
+				<pitch indoor="1.0" outdoor="1.0" >
+					<modifier type="MOTOR_RPM" value="0.0" modifiedValue="1.00" />
+					<modifier type="MOTOR_RPM" value="1.0" modifiedValue="1.05" />
+				</pitch>
+				
+				<lowpassGain indoor="0.9" outdoor="0.3" />
+				<lowpassCutoffFrequency indoor="600" outdoor="500.0" />
+				<lowpassResonance indoor="1.0" outdoor="1.0"/>
+				<randomization minVolume="-0.2" maxVolume="0.3" minPitch="-0.1" maxPitch="0.1" isInside="true" isOutside="false"/>
+			</gearbox>
+			
+			<!-- <Innengereuche> -->
+			
+			<gearbox  file="universal/FD_extras/FD_Extra.gls"  innerRadius="5.0" outerRadius="15.0" fadeOut="0.2" volumeScale="1.0" isLocalSound="true" supportsReverb="false">
+			
+                <volume indoor="0.95" outdoor="0.00" >
+					<modifier type="SPEED" value="1.0" modifiedValue="0.00" />			
+					<modifier type="SPEED" value="7.0" modifiedValue="0.6" />
+					<modifier type="SPEED" value="10.0" modifiedValue="0.9" />			
+					<modifier type="SPEED" value="25.0" modifiedValue="1.0" />
+					<modifier type="SPEED" value="35.0" modifiedValue="1.4" />
+				</volume>
+				<loopSynthesisRpm>
+                    <modifier type="MOTOR_RPM" value="0.0" modifiedValue="0.05" />
+                    <modifier type="MOTOR_RPM" value="1.0" modifiedValue="0.05" />
+                </loopSynthesisRpm>
+				<pitch indoor="1.0" outdoor="1.0" >
+					<modifier type="MOTOR_RPM" value="0.0" modifiedValue="1.00" />
+					<modifier type="MOTOR_RPM" value="1.0" modifiedValue="1.05" />
+				</pitch>
+				<lowpassGain indoor="0.3" outdoor="0.5" />
+				<lowpassCutoffFrequency indoor="200" outdoor="900.0" />
+				<lowpassResonance indoor="0.0" outdoor="1.0"/>
+				<randomization minVolume="-0.2" maxVolume="0.3" minPitch="-0.1" maxPitch="0.1" isInside="true" isOutside="false"/>
+			</gearbox>
+			
+			<!-- <Aussengereuche> -->
+			
+			<gearbox file="universal/FD_extras/FD_Extra.gls" linkNodeOffset="0 1.0 -0.5" volumeScale="1.0" innerRadius="0.5" outerRadius="5" fadeIn="1" fadeOut="1.5" pitchScale="0.35" >
+				<volume indoor="0.3" outdoor="1.85" >
+                    <modifier type="DIFFERENTIAL_SPEED" value="0.0"  modifiedValue="1.20" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="10.1" modifiedValue="0.10" />
+                </volume>
+				<loopSynthesisRpm>
+                    <modifier type="MOTOR_RPM" value="0.0" modifiedValue="0.35" />
+                    <modifier type="MOTOR_RPM" value="1.0" modifiedValue="0.35" />
+                </loopSynthesisRpm>
+				<lowpassGain indoor="0.5" outdoor="10.7" />
+				<lowpassCutoffFrequency indoor="700" outdoor="200.0" />
+				<lowpassResonance indoor="1.0" outdoor="1.0"/>
+			</gearbox>
+			
+            <gearGroupLeverStart template="gearDisengaged" volumeScale="2.5"/>
+            <gearGroupLeverEnd   template="gearEngaged"    volumeScale="2.5"/>
+			
+            <!-- <Druckluft> -->
+			
+            <compressedAir file="universal/FD_extras/FD_Brake_01.ogg" innerRadius="5.0" outerRadius="40.0" >
+				<volume indoor="1.08" outdoor="1.50" >
+					<modifier type="SPEED" value="0.0" modifiedValue="0.0"/>
+					<modifier type="SPEED" value="3.0" modifiedValue="0.5"/>
+					<modifier type="SPEED" value="5.0" modifiedValue="0.88"/>
+					<modifier type="SPEED" value="10.0" modifiedValue="1.0"/>
+				</volume>	
+				<pitch indoor="0.95" outdoor="1.00" />
+				<lowpassGain indoor="0.70" outdoor="11.1" />
+			</compressedAir>
+			
+            <airCompressorRun file="$data/sounds/vehicles/compressor/compressorLoop2.wav"  linkNodeOffset="0 0.0 -0.5" outerRadius="23.0" innerRadius="1" >
+				<volume indoor="0.85" outdoor="2.15" >
+					<modifier type="MOTOR_RPM" value="0.0" modifiedValue="1.0" />
+					<modifier type="MOTOR_RPM" value="0.2" modifiedValue="0.9" />
+					<modifier type="MOTOR_RPM" value="0.4" modifiedValue="0.8" />
+					<modifier type="MOTOR_RPM" value="0.5" modifiedValue="0.65" />
+					<modifier type="MOTOR_RPM" value="1.0" modifiedValue="0.6" />
+				</volume>	
+				<pitch indoor="1.0" outdoor="1.0" >
+					<modifier type="MOTOR_RPM" value="0.0" modifiedValue="0.73" />
+					<modifier type="MOTOR_RPM" value="1.0" modifiedValue="1.25" />
+				</pitch>
+				<lowpassGain indoor="0.5" outdoor="10.7" />
+				<lowpassCutoffFrequency indoor="700" outdoor="200.0" />
+				<lowpassResonance indoor="1.0" outdoor="1.0"/>
+			</airCompressorRun>
+			
+            <airCompressorStop template="compressedAir"/>
+			
+			<brake file="universal/FD_extras/FD_DruckLquitschen.gls" innerRadius="5.0" outerRadius="70.0" pitchScale="0.85" >
+				<volume indoor="0.88" outdoor="1.08">
+					<modifier type="DECELERATE" value="0.0" modifiedValue="0.0" />
+					<modifier type="DECELERATE" value="0.2" modifiedValue="0.4" />
+					<modifier type="DECELERATE" value="0.5" modifiedValue="1.1" />
+					<modifier type="DECELERATE" value="0.8" modifiedValue="2.2" />
+					<modifier type="DRIVING_DIRECTION" value="-1.0" modifiedValue="0.0" />
+					<modifier type="DRIVING_DIRECTION" value="0.00" modifiedValue="0.0" />
+					<modifier type="DRIVING_DIRECTION" value="1.00" modifiedValue="1.0" />
+				</volume>
+				<loopSynthesisRpm>
+                    <modifier type="SPEED" value="0.0" modifiedValue="0.00" />
+                    <modifier type="SPEED" value="40.0" modifiedValue="1.0" />
+                </loopSynthesisRpm>
+				<pitch indoor="0.95" outdoor="1.0" >
+					<modifier type="SPEED" value="0.0" modifiedValue="1.28"/>
+					<modifier type="SPEED" value="40.0" modifiedValue="1.0"/>
+				</pitch>
+				<loopSynthesisLoad>
+					<modifier type="DECELERATE" value="0.0" modifiedValue="0.0" />
+                    <modifier type="DECELERATE" value="0.2" modifiedValue="0.0" />
+                    <modifier type="DECELERATE" value="0.5" modifiedValue="0.6" />
+                    <modifier type="DECELERATE" value="1.0" modifiedValue="1.0" />
+                </loopSynthesisLoad>
+				<lowpassGain indoor="0.28" outdoor="1.0" />
+				<lowpassCutoffFrequency indoor="200" outdoor="1000.0" />
+				<lowpassResonance indoor="1.0" outdoor="1.0"/>
+			</brake>
+        </sounds>
+    </motorized>
+
+    <lights>
+        <sounds>
+            <toggleLights template="SWITCH_01"  />
+            <turnLight template="SWITCH_TURNLIGHT"  />
+        </sounds>
+    </lights>
+
+    <attacherJoints>
+        <sounds>
+            <attach template="ATTACH_01" />
+            <hydraulic template="defaultHydraulicSound" />
+        </sounds>
+    </attacherJoints>
+
+    <drivable>
+        <sounds>
+            <waterSplash template="WATER_SPLASH_01" />
+        </sounds>
+    </drivable>
+
+    <honk>
+        <sound template="HONK_TRUCK" />
+    </honk>
+</sounds>
