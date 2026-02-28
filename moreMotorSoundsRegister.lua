@@ -100,66 +100,39 @@ end
 function addNewStoreConfig(xmlFile, superFunc, baseXMLName, baseDir, customEnvironment, isMod, storeItem)
 	local configurations = superFunc(xmlFile, baseXMLName, baseDir, customEnvironment, isMod, storeItem)
 
-    local category = "no category found"
-    if storeItem == nil then
-    elseif configurations == nil then
-    elseif configurations["moreMotorSounds"] ~= nil then
-    else
-        category = "/" .. string.upper(storeItem.categoryName) .. "/"
+    if storeItem == nil or configurations == nil or configurations["moreMotorSounds"] ~= nil then
+        return configurations
     end
 
-    if string.find(_allUsedCategories, category) then
+    configurations["moreMotorSounds"] = {
+        {name = g_i18n:getText("CONFIG_STANDARD_SOUND"), index = 1, isDefault = true,  price = 0, dailyUpkeep = 0, isSelectable = true}
+    }
 
-        configurations["moreMotorSounds"] = {
-            {name = g_i18n:getText("CONFIG_STANDARD_SOUND"), index = 1, isDefault = true,  price = 0, dailyUpkeep = 0, isSelectable = true}
-        }
+    local isMultiplayer = g_currentMission ~= nil and g_currentMission.missionDynamicInfo ~= nil and g_currentMission.missionDynamicInfo.isMultiplayer
+    if not isMultiplayer and g_mpLoadingScreen ~= nil and g_mpLoadingScreen.missionDynamicInfo ~= nil then
+        isMultiplayer = g_mpLoadingScreen.missionDynamicInfo.isMultiplayer
+    end
 
-        local j = 2
-        local i = 2
-        local name = string.lower(storeItem.name)
+    local i = 2
+    local j = 2
+    while _configName[j] ~= nil do
+        local excludeBlowoff = _excludeBlowoff[j]
+        local shouldExcludeBlowoff = isMultiplayer and (string.find(_configName[j]:lower(), "blowoff") or excludeBlowoff == "true")
 
+        if not shouldExcludeBlowoff then
+            configurations["moreMotorSounds"][i] = {
+                name = _configName[j],
+                index = i,
+                indexMMS = j,
+                isDefault = false,
+                price = 0,
+                dailyUpkeep = 0,
+                isSelectable = true
+            }
+            i = i + 1
+        end
 
-
-
-		while _configName[j] ~= nil do
-			local excludeBlowoff = _excludeBlowoff[j] -- Use the parsed excludeBlowoff value
-
-			-- Determine if we should apply the blowoff filter based on multiplayer status
-			local shouldExcludeBlowoff = g_mpLoadingScreen.missionDynamicInfo.isMultiplayer and 
-										 (string.find(_configName[j]:lower(), "blowoff") or excludeBlowoff == "true")
-
-			-- If not excluding due to blowoff, proceed with the rest of the logic
-			if not shouldExcludeBlowoff then
-				if _brand[j] == "" or _brand[j] == storeItem.brandNameRaw then
-					if string.find(_category[j], category) then
-						if _search[j] == "" or string.find(storeItem.xmlFilenameLower, _search[j]) or string.find(name, _search[j]) or string.find(storeItem.xmlFilenameLower, _search2[j]) or string.find(name, _search2[j]) then
-							if not string.find(name, _exclude[j]) or _exclude[j] == "" then
-								if not string.find(name, _exclude2[j]) or _exclude2[j] == "" then
-									configurations["moreMotorSounds"][i] = {}
-									configurations["moreMotorSounds"][i].name = _configName[j]
-									configurations["moreMotorSounds"][i].index = i
-									configurations["moreMotorSounds"][i].indexMMS = j
-									configurations["moreMotorSounds"][i].isDefault = false
-									configurations["moreMotorSounds"][i].price = 0
-									configurations["moreMotorSounds"][i].dailyUpkeep = 0
-									configurations["moreMotorSounds"][i].isSelectable = true
-									i = i + 1
-								end
-							end
-						end
-					end
-				end
-			else
-				print("Excluding configName due to blowoff condition: ", _configName[j])
-			end
-
-			j = j + 1
-		end
-
-
-
-
-
+        j = j + 1
     end
 
     return configurations

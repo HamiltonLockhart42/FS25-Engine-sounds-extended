@@ -5,23 +5,23 @@
 		
 			<!-- <Motor_ext> -->
 		
-            <motor file="case/FD_BT6_ext.gls" volumeScale="1.0" linkNodeOffset="0.1 0.2 1.8" loopSynthesisRPMRatio="1.03" pitchScale="0.92" outerRadius="38.0" innerRadius="1">
+            <motor file="FD_BT6_ext.gls" volumeScale="1.0" linkNodeOffset="0.1 0.2 1.8" loopSynthesisRPMRatio="1.03" pitchScale="0.92" outerRadius="38.0" innerRadius="1">
 				<volume indoor="0.68" outdoor="0.87" />
 			</motor>
 			
-			<motor file="case/FD_BT6_engineLoad.gls" volumeScale="1.25" linkNodeOffset="0.1 0.2 1.8" loopSynthesisRPMRatio="1.0" pitchScale="0.98" outerRadius="20.0" innerRadius="1">
+			<motor file="FD_BT6_engineLoad.gls" volumeScale="1.25" linkNodeOffset="0.1 0.2 1.8" loopSynthesisRPMRatio="1.0" pitchScale="0.98" outerRadius="20.0" innerRadius="1">
 				<volume indoor="0.55" outdoor="1" />
 			</motor>
 			
 			<!-- <Auspuff> -->
 			
-			<motor file="case/FD_BT6_exh.gls" volumeScale="1.25" linkNodeOffset="-0.7 2.5 1.9" loopSynthesisRPMRatio="1.03" pitchScale="0.86" outerRadius="55.0" fadeIn="2.3" innerRadius="1.0">
+			<motor file="FD_BT6_exh.gls" volumeScale="1.25" linkNodeOffset="-0.7 2.5 1.9" loopSynthesisRPMRatio="1.03" pitchScale="0.86" outerRadius="55.0" fadeIn="2.3" innerRadius="1.0">
 				<volume indoor="0.65" outdoor="1.8" />
 			</motor>
 			
 			<!-- Turbo -->
 			
-			<gearbox file="case/FD_BT6_Turbo.gls"   volumeScale="1.15" linkNodeOffset="-0.7 2.5 0.9" loopSynthesisRPMRatio="1.02" pitchScale="0.72" outerRadius="55.0" fadeIn="1" >
+			<gearbox file="FD_BT6_Turbo.gls"   volumeScale="1.15" linkNodeOffset="-0.7 2.5 0.9" loopSynthesisRPMRatio="1.02" pitchScale="0.72" outerRadius="55.0" fadeIn="1" >
 				<volume indoor="0.30" outdoor="1.0" >
 
                     <modifier type="MOTOR_LOAD" value="0.00"   modifiedValue="0.00" />
@@ -51,7 +51,7 @@
 			
 			<!-- AuspuffLoad -->
 			
-			<motor file="case/FD_Ihc_onload.gls"   volumeScale="1.50" linkNodeOffset="-0.7 2.5 0.9" loopSynthesisRPMRatio="1.02" pitchScale="0.75" outerRadius="55.0" fadeIn="1" >
+			<motor file="FD_Ihc_onload.gls"   volumeScale="1.50" linkNodeOffset="-0.7 2.5 0.9" loopSynthesisRPMRatio="1.02" pitchScale="0.75" outerRadius="55.0" fadeIn="1" >
 				<volume indoor="0.45" outdoor="0.66" />
 				<loopSynthesisLoad>
 					<modifier type="MOTOR_LOAD" value="0.0" modifiedValue="0.0" />
@@ -66,7 +66,7 @@
             
             <!-- <Motorkuehler> -->
 			
-			<gearbox  file="$data/vehicles/volvo/lm845/sounds/Fan_loop.gls" linkNodeOffset="0 1.5 2.5" loopSynthesisRPMRatio="0.92" pitchScale="0.85" volumeScale="0.9" innerRadius="0.5" outerRadius="25" fadeIn="3" fadeOut="1.5" >
+			<gearbox  file="Transmission_loop.gls" linkNodeOffset="0 1.5 2.5" loopSynthesisRPMRatio="0.92" pitchScale="0.85" volumeScale="0.9" innerRadius="0.5" outerRadius="25" fadeIn="3" fadeOut="1.5" >
                 <lowpassGain indoor="0.32" outdoor="0.9" />
                 <lowpassCutoffFrequency indoor="500" outdoor="1000"/>
                 <lowpassResonance indoor="0" outdoor="0"/>
@@ -97,7 +97,7 @@
 			
 			<!-- <Getriebe> -->
 			
-			<gearbox  file="universal/6_cylinder/1995_6_cylinder/FD_P1006_6T_gtr.gls" linkNodeOffset="0.0 1.3 -0.3" pitchScale="1.0" fadeIn="0.5" volumeScale="1.0" innerRadius="1" outerRadius="55" supportsReverb="false">
+			<gearbox  file="FD_P1006_6T_gtr.gls" linkNodeOffset="0.0 1.3 -0.3" pitchScale="1.0" fadeIn="0.5" volumeScale="1.0" innerRadius="1" outerRadius="55" supportsReverb="false">
                 <volume indoor="2.17" outdoor="3.6" >
                     <modifier type="SPEED" value="1.0" modifiedValue="0.1" />
 					<modifier type="SPEED" value="16.0" modifiedValue="0.5" />
@@ -135,7 +135,7 @@
                 <lowpassCutoffFrequency indoor="400" outdoor="600"/>
                 <lowpassResonance indoor="2" outdoor="2"/>
             </gearbox>
-            <gearbox file="$data/vehicles/valtra/tSeries/sounds/Transmission_loop.gls" linkNodeOffset="-0.65 0.5 -1" pitchScale="0.75" volumeScale="2.7" innerRadius="1" outerRadius="40" fadeIn="0.9" fadeOut="1">
+            <gearbox file="Transmission_loop.gls" linkNodeOffset="-0.65 0.5 -1" pitchScale="0.75" volumeScale="2.7" innerRadius="1" outerRadius="40" fadeIn="0.9" fadeOut="1">
                 <loopSynthesisRpm>
                     <modifier type="DIFFERENTIAL_SPEED" value="0.0" modifiedValue="0.0" />
                     <modifier type="DIFFERENTIAL_SPEED" value="26.0" modifiedValue="0.5" />
@@ -167,7 +167,7 @@
 			
 			<!-- <Ketten> -->
 			
-			<gearbox  file="universal/FD_extras/FD_Extra.gls" linkNodeOffset="0 0.7 -2" volumeScale="0.7" pitchScale="1.2" fadeIn="0.5" fadeOut="1.5" innerRadius="2.5" outerRadius="40">
+			<gearbox  file="FD_Extra.gls" linkNodeOffset="0 0.7 -2" volumeScale="0.7" pitchScale="1.2" fadeIn="0.5" fadeOut="1.5" innerRadius="2.5" outerRadius="40">
 				
                 <volume indoor="0.9" outdoor="2.1" >
                     <modifier type="SUSPENSION" value="-0.15" modifiedValue="1" />
@@ -199,7 +199,7 @@
 			
 			<!-- <Sitz> -->
 			
-			<gearbox  file="universal/FD_extras/FD_Extra.gls" pitchScale="1.05" linkNodeOffset="0 2.1 0.0" innerRadius="2.0" outerRadius="5.0" fadeOut="0.2" volumeScale="1.0" isLocalSound="true" supportsReverb="false">
+			<gearbox  file="FD_Extra.gls" pitchScale="1.05" linkNodeOffset="0 2.1 0.0" innerRadius="2.0" outerRadius="5.0" fadeOut="0.2" volumeScale="1.0" isLocalSound="true" supportsReverb="false">
                 <volume indoor="2.9" outdoor="0.0" >
 					<modifier type="SPEED" value="1.0" modifiedValue="0.03" />			
 					<modifier type="SPEED" value="7.0" modifiedValue="0.3" />
@@ -232,7 +232,7 @@
 				<randomization minVolume="-0.2" maxVolume="0.3" minPitch="-0.1" maxPitch="0.1" isInside="true" isOutside="false"/>
 			</gearbox>
 			
-			<gearbox  file="universal/FD_extras/FD_Extra.gls" pitchScale="1.15" linkNodeOffset="0 1.3 0.1" innerRadius="1.0" outerRadius="15.0" fadeOut="0.2" volumeScale="1.0" isLocalSound="true" supportsReverb="false">
+			<gearbox  file="FD_Extra.gls" pitchScale="1.15" linkNodeOffset="0 1.3 0.1" innerRadius="1.0" outerRadius="15.0" fadeOut="0.2" volumeScale="1.0" isLocalSound="true" supportsReverb="false">
                 <volume indoor="2.9" outdoor="0.0" >
 					<modifier type="ACCELERATE" value="0.0" modifiedValue="0.5" />
 					<modifier type="ACCELERATE" value="0.2" modifiedValue="1.0" />
@@ -271,7 +271,7 @@
 			
 			<!-- <Innengereuche> -->
 			
-			<gearbox  file="universal/FD_extras/FD_Extra.gls"  innerRadius="5.0" outerRadius="15.0" fadeOut="0.2" volumeScale="1.0" isLocalSound="true" supportsReverb="false">
+			<gearbox  file="FD_Extra.gls"  innerRadius="5.0" outerRadius="15.0" fadeOut="0.2" volumeScale="1.0" isLocalSound="true" supportsReverb="false">
 			
                 <volume indoor="1.15" outdoor="0.00" >
 					<modifier type="SPEED" value="1.0" modifiedValue="0.00" />			
@@ -296,7 +296,7 @@
 			
 			<!-- <Aussengereuche> -->
 			
-			<gearbox  file="$data/vehicles/volvo/lm845/sounds/Fan_loop.gls" linkNodeOffset="0 1.5 1.9" loopSynthesisRPMRatio="0.92" pitchScale="1.05" volumeScale="0.9" innerRadius="0.5" outerRadius="25" fadeIn="3" fadeOut="1.5" >
+			<gearbox  file="Transmission_loop.gls" linkNodeOffset="0 1.5 1.9" loopSynthesisRPMRatio="0.92" pitchScale="1.05" volumeScale="0.9" innerRadius="0.5" outerRadius="25" fadeIn="3" fadeOut="1.5" >
                 <lowpassGain indoor="0.22" outdoor="0.7" />
                 <lowpassCutoffFrequency indoor="500" outdoor="1000"/>
                 <lowpassResonance indoor="0" outdoor="0"/>
@@ -330,7 +330,7 @@
 			
 			<!-- <Druckluft> -->
 			
-            <compressedAir file="universal/FD_extras/FD_Brake_01.ogg" innerRadius="5.0" outerRadius="40.0" >
+            <compressedAir file="FD_Brake_01.ogg" innerRadius="5.0" outerRadius="40.0" >
 				<volume indoor="1.08" outdoor="1.50" >
 					<modifier type="SPEED" value="0.0" modifiedValue="0.0"/>
 					<modifier type="SPEED" value="3.0" modifiedValue="0.5"/>
@@ -360,7 +360,7 @@
 			
             <airCompressorStop template="compressedAir"/>
 			
-			<brake file="universal/FD_extras/FD_DruckLquitschen.gls" innerRadius="5.0" outerRadius="70.0" pitchScale="0.85" >
+			<brake file="FD_DruckLquitschen.gls" innerRadius="5.0" outerRadius="70.0" pitchScale="0.85" >
 				<volume indoor="0.88" outdoor="1.08">
 					<modifier type="DECELERATE" value="0.0" modifiedValue="0.0" />
 					<modifier type="DECELERATE" value="0.2" modifiedValue="0.4" />
