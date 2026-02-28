@@ -125,7 +125,12 @@ function addNewStoreConfig(xmlFile, superFunc, baseXMLName, baseDir, customEnvir
 			local excludeBlowoff = _excludeBlowoff[j] -- Use the parsed excludeBlowoff value
 
 			-- Determine if we should apply the blowoff filter based on multiplayer status
-			local shouldExcludeBlowoff = g_mpLoadingScreen.missionDynamicInfo.isMultiplayer and 
+			local isMultiplayer = g_currentMission ~= nil and g_currentMission.missionDynamicInfo ~= nil and g_currentMission.missionDynamicInfo.isMultiplayer
+			if not isMultiplayer and g_mpLoadingScreen ~= nil and g_mpLoadingScreen.missionDynamicInfo ~= nil then
+				isMultiplayer = g_mpLoadingScreen.missionDynamicInfo.isMultiplayer
+			end
+
+			local shouldExcludeBlowoff = isMultiplayer and 
 										 (string.find(_configName[j]:lower(), "blowoff") or excludeBlowoff == "true")
 
 			-- If not excluding due to blowoff, proceed with the rest of the logic
