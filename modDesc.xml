@@ -10,84 +10,73 @@
         ]]>
     </contributors>
 
-    <version>1.0.0.0</version>
+    <version>1.0.1.0</version>
     <title>
         <en>More Motor Sounds</en>
     </title>
     <description>
 <en>
 <![CDATA[
-This script makes it possible to configure an alternative engine sound for a large number of tractors. 
-With the new ‘More Motor Sound’ configuration in the shop, various sounds can be selected from an extensive database. 
-The available sounds are depending on the model and include different engine sounds for 4-, 6- and 8-cylinder engines. 
-In some cases different variants are available, such as sounds with an integrated turbo, blow-off valve or an OpenPipe option.
+This mod adds a "More Motor Sounds" configuration to supported motorized vehicles in the shop.
 
-Attention: Blowoff sounds are only available in singleplayer!
+Functions:
+- Keeps the original vehicle sound as the default option.
+- Adds multiple alternative engine sound presets (4-cylinder, 6-cylinder, 8-cylinder, open pipe and blowoff variants).
+- Filters available presets by vehicle category, brand and search keywords.
+- Stores the selected sound setup in savegames.
+- Disables blowoff-specific variants in multiplayer/dedicated-server sessions for stability and sync safety.
 
-List of all available sounds:
-- 1990er, 4-cylinder
-- 2000er, 4-cylinder
-- Fendt GTA 380 
-- 1990er, 6-cylinder
-- 1995er, 6-cylinder
-- 2000er, 6-cylinder
-- 1990er, 8-cylinder
-- MB Trac
-- 90er, IHC
-- Fendt 930 TMS
+Included preset families:
+- 1990, 4 cyl. turbo
+- 2000, 4 cyl. turbo
+- Fendt 380 GTA
+- 1990, 6-cyl.
+- 1990, 6-cyl. + turbo
+- 1995, 6-cyl.
+- 2000, 6-cyl.
+- 2000, 6-cyl. + open pipe
+- 2000, 6-cyl. + open pipe + blowoff (singleplayer only)
+- 1990, 8-cyl. + turbo
+- 90s IHC
 
-Changelog 1.0.0.1
-fixed log error for 1990er 4-cyl sound
+Changelog 1.0.1.0
+- FS25 packaging and descriptor update
+- improved multiplayer blowoff filtering
+- repository cleanup and deployment docs added
 ]]>
 </en>
 <de>
 <![CDATA[
-Dieses Script ermöglicht es, bei einer Vielzahl von Traktoren einen alternativen Motor-Sound zu konfigurieren. 
-Mit der neuen "More Motor Sound"-Konfiguration im Shop können verschiedene Sounds aus einer umfangreichen Datenbank ausgewählt werden. 
-Die verfügbaren Sounds variieren je nach Modell und umfassen verschiedene Motorsounds für 4-, 6- und 8-Zylinder-Motoren. 
-Zudem stehen teilweise verschiedene Varianten zur Verfügung, wie beispielsweise Sounds mit integriertem Turbo, Blowoff-Ventil oder einer OpenPipe-Option.
+Dieser Mod fügt im Shop die Konfiguration "More Motor Sounds" für unterstützte motorisierte Fahrzeuge hinzu.
 
-Achtung: Blowoff Sounds sind nur im Einzelspielermodus auswählbar!
+Funktionen:
+- Der originale Fahrzeug-Sound bleibt als Standardauswahl erhalten.
+- Mehrere alternative Motor-Sound-Presets (4-, 6-, 8-Zylinder, OpenPipe- und Blowoff-Varianten).
+- Filterung der Presets nach Fahrzeugkategorie, Marke und Suchbegriffen.
+- Speichert die ausgewählte Sound-Konfiguration im Spielstand.
+- Blowoff-Varianten werden im Multiplayer/auf dedizierten Servern aus Stabilitätsgründen ausgeblendet.
 
-Auflistung aller integrierten Sounds:
-- 1990er, 4-Zylinder
-- 2000er, 4-Zylinder
-- Fendt GTA 380 
-- 1990er, 6-Zylinder
-- 1995er, 6-Zylinder
-- 2000er, 6-Zylinder
-- 1990er, 8-Zylinder
-- MB Trac
-- 90er, IHC
-- Fendt 930 TMS
-
-Changelog 1.0.0.1
-Logfehler zum 1990er 4-Zylinder Sound behoben
+Changelog 1.0.1.0
+- FS25-Anpassung von Paketstruktur und modDesc
+- verbesserte Multiplayer-Filterung für Blowoff-Sounds
+- Bereinigung und Dokumentation für Deployment
 ]]>
 </de>
 <fr>
 <![CDATA[
-Ce script permet, de configurer un son-moteur alternatif sur une multitude de tracteurs.
-Avec le nouveau "More Motor Sound"-configuration dans le shop, différents son-moteur peuvent être choisi dans une riche banque de données.
-Les sons disponible varis selon le modèle et dispose de différents son-moteur pour les 4-, 6- et 8- cylindres.
-Enplus vous avez pour certains son-moteur différentes variations possible, par exemple: turbo intégré, soupape-Blowoff ou une option ligne droite (OpenPipe). 
+Ce mod ajoute dans la boutique une configuration "More Motor Sounds" pour les véhicules motorisés pris en charge.
 
-Attention : les sons Blowoff ne sont sélectionnables qu'en mode solo!
+Fonctions :
+- Conserve le son d'origine du véhicule comme option standard.
+- Ajoute plusieurs préréglages de sons moteur alternatifs (4, 6, 8 cylindres, open pipe et blowoff).
+- Filtre les préréglages par catégorie, marque et mots-clés.
+- Enregistre la configuration sonore choisie dans la sauvegarde.
+- Désactive les variantes blowoff en multijoueur/serveur dédié pour la stabilité.
 
-Liste de tous les son intégrés:
-- 1990er, 4-cylindres
-- 2000er, 4-cylindres
-- Fendt GTA 380 
-- 1990er, 6-cylindres
-- 1995er, 6-cylindres
-- 2000er, 6-cylindres
-- 1990er, 8-cylindres
-- MB Trac
-- 90er, IHC
-- Fendt 930 TMS
-
-Changelog 1.0.0.1
-Correction d'une erreur de log concernant le son des 4 cylindres de 1990
+Changelog 1.0.1.0
+- mise à jour FS25 (packaging + modDesc)
+- amélioration du filtrage blowoff en multijoueur
+- nettoyage du dépôt et documentation de déploiement
 ]]>
 </fr>
     </description>
