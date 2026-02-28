@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="80">
+    <author>[MW]PeterAH + Farming Dud's</author>
+    <contributors>
+        <![CDATA[
+            [MW]PeterAH: Script
+            [FD]Vassili_K98: Sounds
+			peppie84 + [FD]Aekzl: soundVolumeFactor fix; disable blowoff in multiplayer;
+			[FD]Pascal: Overall Modhub-regulations support
+        ]]>
+    </contributors>
+
+    <version>1.0.0.1</version>
+    <title>
+        <en>More Motor Sounds</en>
+    </title>
+    <description>
+<en>
+<![CDATA[
+This script makes it possible to configure an alternative engine sound for a large number of tractors. 
+With the new ‘More Motor Sound’ configuration in the shop, various sounds can be selected from an extensive database. 
+The available sounds are depending on the model and include different engine sounds for 4-, 6- and 8-cylinder engines. 
+In some cases different variants are available, such as sounds with an integrated turbo, blow-off valve or an OpenPipe option.
+
+Attention: Blowoff sounds are only available in singleplayer!
+
+List of all available sounds:
+- 1990er, 4-cylinder
+- 2000er, 4-cylinder
+- Fendt GTA 380 
+- 1990er, 6-cylinder
+- 1995er, 6-cylinder
+- 2000er, 6-cylinder
+- 1990er, 8-cylinder
+- MB Trac
+- 90er, IHC
+- Fendt 930 TMS
+
+Changelog 1.0.0.1
+fixed log error for 1990er 4-cyl sound
+]]>
+</en>
+<de>
+<![CDATA[
+Dieses Script ermöglicht es, bei einer Vielzahl von Traktoren einen alternativen Motor-Sound zu konfigurieren. 
+Mit der neuen "More Motor Sound"-Konfiguration im Shop können verschiedene Sounds aus einer umfangreichen Datenbank ausgewählt werden. 
+Die verfügbaren Sounds variieren je nach Modell und umfassen verschiedene Motorsounds für 4-, 6- und 8-Zylinder-Motoren. 
+Zudem stehen teilweise verschiedene Varianten zur Verfügung, wie beispielsweise Sounds mit integriertem Turbo, Blowoff-Ventil oder einer OpenPipe-Option.
+
+Achtung: Blowoff Sounds sind nur im Einzelspielermodus auswählbar!
+
+Auflistung aller integrierten Sounds:
+- 1990er, 4-Zylinder
+- 2000er, 4-Zylinder
+- Fendt GTA 380 
+- 1990er, 6-Zylinder
+- 1995er, 6-Zylinder
+- 2000er, 6-Zylinder
+- 1990er, 8-Zylinder
+- MB Trac
+- 90er, IHC
+- Fendt 930 TMS
+
+Changelog 1.0.0.1
+Logfehler zum 1990er 4-Zylinder Sound behoben
+]]>
+</de>
+<fr>
+<![CDATA[
+Ce script permet, de configurer un son-moteur alternatif sur une multitude de tracteurs.
+Avec le nouveau "More Motor Sound"-configuration dans le shop, différents son-moteur peuvent être choisi dans une riche banque de données.
+Les sons disponible varis selon le modèle et dispose de différents son-moteur pour les 4-, 6- et 8- cylindres.
+Enplus vous avez pour certains son-moteur différentes variations possible, par exemple: turbo intégré, soupape-Blowoff ou une option ligne droite (OpenPipe). 
+
+Attention : les sons Blowoff ne sont sélectionnables qu'en mode solo!
+
+Liste de tous les son intégrés:
+- 1990er, 4-cylindres
+- 2000er, 4-cylindres
+- Fendt GTA 380 
+- 1990er, 6-cylindres
+- 1995er, 6-cylindres
+- 2000er, 6-cylindres
+- 1990er, 8-cylindres
+- MB Trac
+- 90er, IHC
+- Fendt 930 TMS
+
+Changelog 1.0.0.1
+Correction d'une erreur de log concernant le son des 4 cylindres de 1990
+]]>
+</fr>
+    </description>
+    <iconFilename>icon_moreMotorSounds.png</iconFilename>
+    <multiplayer supported="true"/>
+    <extraSourceFiles>
+        <sourceFile filename="moreMotorSoundsRegister.lua"/>
+    </extraSourceFiles>
+
+    <motorSounds standardCategories="tractorsS/tractorsM/tractorsL" />
+    <!-- Tags: configName, configNameDE, brand, category, search, search2, exclude, exclude2, soundFile -->
+    <moreMotorSounds>
+
+        <!-- PeterAH -->
+        <motorSound configName="Agrostar 6.61"    brand="DEUTZFAHR"     	category="tractorsS/tractorsM"     soundFile="deutz/Agrostar661/deutz_agrostar_661_sounds.xml" />
+
+        <!-- Vassili_K98 -->
+		<!-- 4 cylinder sounds -->
+		<motorSound configName="1990, 4 cyl. Turbo"      							category="tractorsS"  														soundFile="universal/4_cylinder/1990_4_cylinder/Bf4L913T.xml" /> 
+		<motorSound configName="2000, 4 cyl. Turbo"      							category="tractorsS" exclude="MF 7S"   										soundFile="universal/4_cylinder/2000_4_cylinder/FD_4zyl_A.xml" /> 
+		<motorSound configName="Fendt 380 GTA" 					brand="FENDT"     	category="tractorsS"  search="GTA" search2="380" 							soundFile="universal/4_cylinder/1990_4_cylinder/GTA.xml" />
+		<!-- 6 cylinder sounds -->
+		<motorSound configName="1990, 6-cyl."    									category="tractorsS/tractorsM"    											soundFile="universal/6_cylinder/1990_6_cylinder/Mwm_226_6.xml" />
+        <motorSound configName="1990, 6-cyl. + turbo"    							category="tractorsS/tractorsM"  											soundFile="universal/6_cylinder/1990_6_cylinder/Mwm_226_6_Turbo.xml" />
+		<motorSound configName="1990, 8-cyl. + turbo"   							category="tractorsL" search="Steiger" search2="Trac" exclude="JCB" 			soundFile="universal/8_cylinder/1990_8_cylinder/Old_V8.xml" /> 
+		<motorSound configName="1990, 8-cyl. + turbo"   							category="tractorsL" search="RSM" search2="Versatile" exclude="JCB" 		soundFile="universal/8_cylinder/1990_8_cylinder/Old_V8.xml" /> 	
+        <motorSound configName="1995, 6-cyl."   									category="tractorsM/tractorsL" 												soundFile="universal/6_cylinder/1995_6_cylinder/Perkins_1006_60T.xml" />
+		<motorSound configName="2000, 6-cyl."   									category="tractorsS/tractorsM/tractorsL"  									soundFile="universal/6_cylinder/2000_6_cylinder/fastrac8330.xml" />
+		<motorSound configName="2000, 6-cyl. + oP"   								category="tractorsM/tractorsL"  											soundFile="universal/6_cylinder/2000_6_cylinder/fastrac8330_Openpipe.xml" />
+		<motorSound configName="2000, 6-cyl. + oP + Blowoff"  						category="tractorsM/tractorsL"  											soundFile="universal/6_cylinder/2000_6_cylinder/fastrac8330_Openpipe_Blowoff.xml" />
+		<motorSound configName="MB Trac + Turbo"   									category="tractorsM/tractorsL" search="MB" search2="Trac" 					soundFile="mercedes/OM366/OM_366.xml" />
+		<motorSound configName="MB Trac + Turbo + Blowoff"   						category="tractorsM/tractorsL" search="MB" search2="Trac" 					soundFile="mercedes/OM366/OM_366_BL.xml" />
+		<motorSound configName="90s IHC" 						brand="MCCORMICK" 	category="tractorsS/tractorsM/tractorsL" search="mcCormick" search2="IH" 	soundFile="case/case.xml" />
+		<motorSound configName="90s IHC" 						brand="CASEIH" 		category="tractorsS/tractorsM/tractorsL" search="CASE" search2="IHC" 		soundFile="case/case.xml" />
+		<motorSound configName="90s IHC" 						brand="IHC" 		category="tractorsS/tractorsM/tractorsL" search="1455" 						soundFile="case/case.xml" />
+		<motorSound configName="Fendt 900 TMS" 					brand="FENDT" 		category="tractorsM/tractorsL" search="VARIO" 								soundFile="fendt/fendt.xml" />    
+    </moreMotorSounds>
+
+    <l10n>
+        <text name="CONFIG_TITLE">
+            <en>More Motor Sounds</en>
+            <de>More Motor Sounds</de>
+        </text>
+        <text name="CONFIG_STANDARD_SOUND">
+            <en>Standard sound</en>
+            <de>Standard-Sound</de>
+        </text>
+    </l10n>
+
+</modDesc>
